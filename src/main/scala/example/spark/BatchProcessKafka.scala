@@ -37,9 +37,12 @@ object BatchProcessKafka {
 
     val conf = new SparkConf().setAppName(APP_NAME).setMaster("local[*]")
     val sc = new SparkContext(conf)
-    val sparkSession = SparkSession.builder.config(conf).getOrCreate()
-    val sqlContext = sparkSession.sqlContext
-    import sparkSession.implicits._
+    val spark = SparkSession.builder.config(conf).getOrCreate()
+    val sqlContext = spark.sqlContext
+    import spark.implicits._
+
+    //val df1 = spark.read.format("kafka").options(Map[String, String]()).load()
+    //val df2 = spark.readStream.format("kafka").options(Map[String, String]()).load()
 
     val gid = APP_NAME + Instant.now.getEpochSecond
 
