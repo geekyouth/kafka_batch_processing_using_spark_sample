@@ -22,7 +22,8 @@ Please read the blog post [in here](http://sathish.me/scala/2018/02/03/batch-pro
 ```
 * Generate Sample data for the topic
 ```bash
-> kafka-console-producer --broker-list localhost:9092 --topic web_stream  --property parse.key=true --property key.separator=,
+> kafka-console-producer --broker-list localhost:9092 --topic web_stream  --property parse.key=true --property key.separator=","
+
 > cus_001,{"product":"PD0021","category": "Books","ts":"1516978415"}
 > cus_001,{"product":"PD0022","category": "TV","ts":"1517978415"}
 ```
