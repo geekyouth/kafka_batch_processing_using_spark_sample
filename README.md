@@ -11,7 +11,7 @@ Please read the blog post [in here](http://sathish.me/scala/2018/02/03/batch-pro
 
 ## Build
 ```bash
-> sbt package
+> mvn clean package -DskipTests -T 20
 ```
 
 ## Execution
@@ -19,6 +19,8 @@ Please read the blog post [in here](http://sathish.me/scala/2018/02/03/batch-pro
 * Create kafka topic with required number of partition & other configurations
 ```bash
 > kafka-topics --zookeeper localhost:2181 --replication-factor 1 --create --partitions 5 --topic web_stream --config retention.ms=604800000
+
+> kafka-topics --zookeeper localhost:2181 --list
 ```
 * Generate Sample data for the topic
 ```bash
