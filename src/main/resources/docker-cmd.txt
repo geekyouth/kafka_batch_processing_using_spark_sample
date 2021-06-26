@@ -1,9 +1,0 @@
-docker compose -f src/main/resources/kafka-compose.yml up -d --build
-docker compose -f src/main/resources/kafka-compose.yml up -d
-docker compose -f src/main/resources/kafka-compose.yml up
-
-docker compose -f src/main/resources/kafka-compose.yml down
-docker compose -f src/main/resources/kafka-compose.yml kill
-docker compose -f src/main/resources/kafka-compose.yml rm -f
-
-docker ps

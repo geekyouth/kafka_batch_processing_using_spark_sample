@@ -1,0 +1,9 @@
+docker-compose -f .env/kafka-compose.yml up -d --build
+docker-compose -f .env/kafka-compose.yml up -d
+docker-compose -f .env/kafka-compose.yml up
+
+docker-compose -f .env/kafka-compose.yml down
+docker-compose -f .env/kafka-compose.yml kill
+docker-compose -f .env/kafka-compose.yml rm -f
+
+docker ps
